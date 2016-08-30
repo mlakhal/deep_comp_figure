@@ -71,7 +71,7 @@ def createDataset(path, batch_size, batch_name, rgb=True):
                     hf.create_dataset("dataset_1", data=np.array(ds))
                 print("\nCreating batch N: {}".format(cnt))
                 cnt += 1; ds = []
-    if i % batch_size != 0 and i != 1:
+    if i % batch_size != 0:
         ds_name = batch_name + "_" + str(cnt) + ".h5"
         with h5py.File(ds_name, "w") as hf:
             hf.create_dataset("dataset_1", data=np.array(ds))
