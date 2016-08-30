@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.style.use('ggplot')
 
 from keras.models import Sequential
 from keras.layers.advanced_activations import PReLU
