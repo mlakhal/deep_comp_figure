@@ -3,6 +3,15 @@
 GPU run command:
     THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python train.py
 
+================== ========== ============ =======  
+     model         accuracy   precision    recall   
+================== ========== ============ =======  
+     CNN_1         0.7580     0.65         0.86
+     CNN_2         0.7607     0.63         0.89 
+     CNN_3         0.7588     0.64         0.88
+                              
+================== ========== ============ =======  
+
 author: @mlakhal
 
 """
