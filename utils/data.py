@@ -10,16 +10,13 @@ def shuffle_unison(a, b):
     return a, b
 
 def build_y(X):
-    ns = len(X)
+    ns = len(X); n = middle(X)
     middle = lambda x: len(x) / 2
-    n = middle(X)
     
     Y = np.zeros((ns, 2))
-    Y[:n, 0] = 1
-    Y[n:, 1] = 1
+    Y[:n, 0] = 1; Y[n:, 1] = 1
 
     X, Y = shuffle_unison(X, Y)
-    X_test, Y_test = shuffle_unison(X, Y)
 
     X = X.astype('float32')
     X /= 255
